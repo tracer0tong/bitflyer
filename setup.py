@@ -3,10 +3,9 @@
 import os
 import re
 import sys
-
 from codecs import open
-from setuptools import find_packages, setup
-from distutils.core import setup
+
+from setuptools import find_packages
 
 try:
     from setuptools import setup
@@ -20,10 +19,10 @@ if sys.argv[-1] == 'publish':
 packages = [
     'bitflyer'
 ]
-requires = [ ] 
-with open('requirements.txt','r') as fp:
+requires = []
+with open('requirements.txt', 'r') as fp:
     for line in iter(fp.readline, ''):
-        requires.append(line.replace('\n',''))
+        requires.append(line.replace('\n', ''))
 
 version = ''
 with open('bitflyer/__init__.py', 'r') as fd:
@@ -59,8 +58,6 @@ setup(
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3'
     ],
 )
